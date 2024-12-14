@@ -1,38 +1,39 @@
-# sv
+# Breath Work App
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This Svelte-Kit application provides a simple and intuitive interface for practicing box breathing.
 
-## Creating a project
+**What is Box Breathing?**
 
-If you're seeing this, you've probably already done this step. Congrats!
+Box breathing is a deep breathing technique that involves inhaling, holding, exhaling, and holding your breath for equal durations, creating a rhythmic pattern similar to a square. It is often used to reduce stress, improve focus, and calm the nervous system.
 
-```bash
-# create a new project in the current directory
-npx sv create
+**How to Use the App:**
 
-# create a new project in my-app
-npx sv create my-app
-```
+1. **Select a Theme:** Choose from a variety of visually appealing themes to customize the app's appearance.
+2. **Set Breath Length:** Use the slider to adjust the duration of each inhale, hold, exhale, and hold phase (in seconds).
+3. **Choose Number of Rounds:** Determine how many sets of the breathing cycle you want to perform.
+4. **Start the Exercise:** Click the "Start" button to begin the guided breathing session.
+5. **Follow Instructions:** The app will display the current phase (inhale, hold, exhale, hold) and remaining seconds of each phase on the screen. Follow the on-screen instructions and breathe accordingly.
+6. **Stop Exercise:** If you need to stop the exercise before completion, click the "Stop" button.
 
-## Developing
+**Benefits of Box Breathing:**
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Reduces stress and anxiety
+- Improves focus and concentration
+- Calms the nervous system
+- Lowers heart rate and blood pressure
+- Increases mindfulness and self-awareness
 
-```bash
-npm run dev
+**Getting Started:**
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+1.  **Install Deno:** If you haven't already, install Deno from https://deno.land/.
+2.  **Install dependencies:** Run `deno install --allow-scripts --allow-read --allow-write` in your terminal to install dependencies.
+3.  **Start the development server:** Run `deno run dev` in your terminal.
+4.  Access the app in your web browser: `http://localhost:5173`
 
-## Building
+**Contributing:**
 
-To create a production version of your app:
+Contributions are welcome! Please feel free to fork this repository and submit pull requests for any improvements or new features.
 
-```bash
-npm run build
-```
+**License:**
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+This project is licensed under the [MIT License](LICENSE).
