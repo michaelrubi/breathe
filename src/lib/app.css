@@ -1,0 +1,214 @@
+/* app.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@property --clr-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(180, 40%, 70%);
+}
+
+@property --clr-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(210, 50%, 80%);
+}
+
+@property --clr-3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(240, 30%, 85%);
+}
+
+@property --clr-4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(150, 30%, 60%);
+}
+
+@property --clr-5 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: hsl(195, 40%, 60%);
+}
+
+@property --txt-pri {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #4488aa;
+}
+
+@property --txt-sec {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #e8f5ff;
+}
+
+@property --box-clr {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #4488aa22;
+
+}
+
+
+body:has(.ocean-breeze) {
+    --clr-1: hsl(180, 40%, 70%);
+    --clr-2: hsl(210, 50%, 80%);
+    --clr-3: hsl(240, 30%, 85%);
+    --clr-4: hsl(150, 30%, 60%);
+    --clr-5: hsl(195, 40%, 60%);
+    --txt-pri: #006699;
+    --txt-sec: #e8f5ff;
+    --box-clr: #00669922;
+}
+
+body:has(.forest-calm) {
+    --clr-1: hsl(120, 30%, 60%);
+    --clr-2: hsl(150, 20%, 70%);
+    --clr-3: hsl(60, 20%, 80%);
+    --clr-4: hsl(90, 25%, 50%);
+    --clr-5: hsl(30, 20%, 60%);
+    --txt-pri: #334d33;
+    --txt-sec: #f0f8f0;
+    --box-clr: #334d3322;
+
+}
+
+body:has(.twilight-hues) {
+    --clr-1: hsl(270, 20%, 75%);
+    --clr-2: hsl(300, 15%, 80%);
+    --clr-3: hsl(330, 10%, 85%);
+    --clr-4: hsl(240, 15%, 70%);
+    --clr-5: hsl(300, 25%, 60%);
+    --txt-pri: #553366;
+    --txt-sec: #f0eef8;
+    --box-clr: #55336622;
+
+}
+
+body {
+    transition: background-color 0.2s ease;
+}
+
+body:has(.menu) {
+    background-color: var(--clr-1);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.menu {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+button {
+    background-color: var(--clr-4);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 1px 0 var(--box-clr);
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--clr-5);
+}
+
+body:has(.running) {
+    animation: kaleidoscope 5s linear infinite alternate;
+}
+
+.running {
+    display: grid;
+    place-items: center;
+
+}
+
+@keyframes kaleidoscope {
+
+    0%,
+    100% {
+        background-color: var(--clr-1);
+    }
+
+    33% {
+        background-color: var(--clr-2);
+    }
+
+    66% {
+        background-color: var(--clr-3);
+    }
+}
+
+html,
+button,
+span {
+    font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--txt-pri);
+}
+
+div,
+span,
+p,
+button {
+    color: var(--txt-sec);
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.direction {
+    display: grid;
+    grid-template-areas: "stack";
+    place-items: center;
+
+    h2 {
+        grid-area: stack;
+    }
+}
+
+.timer {
+    display: grid;
+    grid-template-areas: "stack";
+    place-items: center;
+    height: 200px;
+
+    h1 {
+        grid-area: stack;
+        margin: 0;
+        opacity: 1;
+        transform: scale(1);
+        animation: numberFade 1.5s linear infinite;
+    }
+}
+
+@keyframes numberFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(4);
+    }
+}
